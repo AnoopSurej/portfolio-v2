@@ -3,18 +3,22 @@
 import React from "react";
 import SectionHeading from "@/components/section-heading";
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
+  const { ref } = useSectionInView("About", 1);
+
   return (
     <motion.section
+      ref={ref}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.25 }}
+      transition={{ delay: 0.175 }}
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
+      <p className="mb-5 text-lg leading-8">
         Hey there! I'm a{" "}
         <span className="font-bold">
           Computer Science and Engineering graduate
@@ -26,7 +30,7 @@ export default function About() {
         into different technologies and building side projects – it's like a
         developer playground!
       </p>
-      <p className="mb-3">
+      <p className="mb-5 text-lg leading-8">
         Speaking of playgrounds, I'm actually looking to expand mine further.
         I've dabbled in <span className="font-bold">Web Development</span>,{" "}
         <span className="font-bold">Infrastructure</span>,{" "}
@@ -36,7 +40,7 @@ export default function About() {
         well-rounded developer, comfortable building both the front-end and the
         behind-the-scenes magic that makes things tick.
       </p>
-      <p className="mb-8">
+      <p className="text-lg leading-8">
         So, if you're looking for someone who's eager to learn and passionate
         about building cool stuff, let's chat! I'm always up for a good
         challenge.
