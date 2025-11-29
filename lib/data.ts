@@ -1,6 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
@@ -15,10 +14,10 @@ export const links = [
     name: "About",
     hash: "#about",
   },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
+  // {
+  //   name: "Projects",
+  //   hash: "#projects",
+  // },
   {
     name: "Skills",
     hash: "#skills",
@@ -27,39 +26,40 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+  // {
+  //   name: "Contact",
+  //   hash: "#contact",
+  // },
 ] as const;
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Senior Developer @ Thoughtworks",
+    location: "Manchester, UK",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+        "Engineered a fully responsive Next.js + TypeScript application with secure OIDC/SSO authentication, AWS Lambda serverless infrastructure (OpenNext + Terraform), a complete Jest/Playwright testing suite, and automated CI/CD deployments via GitHub Actions.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2024 - present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Developer @ Thoughtworks",
+    location: "Manchester, UK",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Led a major Angular-to-React modernization initiative while delivering secure, enterprise-grade CI/CD pipelines for .NET microservices (GitLab, Octopus, Helm/K8s/Azure), modernizing ETL pipelines and webhook systems.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2022 - 2024",
+  },
+  {
+    title: "Bachelors in CompSci & Engineering",
+    location: "Kerala, India",
+    description:
+        "Successfully completed a four-year program establishing comprehensive foundational knowledge in computer science and engineering.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2017 - 2021",
   },
 ] as const;
 
+// TODO: Update this
 export const projectsData = [
   {
     title: "CorpComment",
@@ -85,23 +85,24 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
+  "Java",
   "Python",
-  "Django",
-  "Framer Motion",
+  "Javascript",
+  "ReactJS",
+  "NextJS",
+  "NodeJS",
+  "AWS Lambdas",
+  "Apache Spark",
+  "Octopus Deploy",
+  "TeamCity",
+  "GitLab CI",
+  "Github Actions",
+  "Trivy",
+  "Checkmarx",
+  "Cypress",
+  "Jest",
+  "Azure AKS",
+  "Kubernetes",
+  "Docker",
+  "Helm",
 ] as const;

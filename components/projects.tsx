@@ -7,7 +7,8 @@ import Project from "@/components/project";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects");
+  // TODO: Update the string below to point to Projects instead of Home
+  const { ref } = useSectionInView("Home");
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My Projects</SectionHeading>

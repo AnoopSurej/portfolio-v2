@@ -9,9 +9,11 @@ import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <section
       ref={ref}
@@ -34,7 +36,7 @@ export default function Intro() {
               alt="Anoop Surej portrait"
               width="192"
               height="192"
-              quality="95"
+              quality={95}
               priority={true}
               className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
             />
@@ -62,15 +64,19 @@ export default function Intro() {
           delay: 0.2,
         }}
       >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition-all"
-        >
-          Contact Me
-          <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
-        </Link>
+        {/*<Link*/}
+        {/*  href="#contact"*/}
+        {/*  className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"*/}
+        {/*  onClick={() => {*/}
+        {/*    setActiveSection("Contact");*/}
+        {/*    setTimeOfLastClick(Date.now());*/}
+        {/*  }}*/}
+        {/*>*/}
+        {/*  Contact Me*/}
+        {/*  <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />*/}
+        {/*</Link>*/}
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition-all cursor-pointer border border-black/10"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition-all cursor-pointer borderBlack dark:bg-white/10"
           href="/Anoop_Surej_CV.pdf"
           download
         >
@@ -78,16 +84,18 @@ export default function Intro() {
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition-all cursor-pointer border border-black/10"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition-all cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/anoop-surej/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FaLinkedin />
         </a>
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition-all cursor-pointer border border-black/10"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition-all cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/AnoopSurej"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FaGithubSquare />
         </a>
